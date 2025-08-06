@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otus-msa-first-app
+  labels:
+    app: otus-msa-first-app
+  namespace: otus-msa
+spec:
+  replicas: 2
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      env: local
+  template:
+    metadata:
+      labels:
+        env: local
+    spec:
+      containers:
+        - name: otus-msa-app
+          image: stepanych58/otus-msa:latest
+          ports:
+            - containerPort: 8000

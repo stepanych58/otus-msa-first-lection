@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "5eee5599-c0df-493e-894a-274400dcaa29",
+		"name": "otus-msa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1642862",
+		"_collection_link": "https://interstellar-space-885229.postman.co/workspace/Risk-service-team~cdfee465-b787-407b-a482-710cab7480ef/collection/1642862-5eee5599-c0df-493e-894a-274400dcaa29?action=share&source=collection_link&creator=1642862"
+	},
+	"item": [
+		{
+			"name": "first-app-health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/health",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

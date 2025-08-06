@@ -1,0 +1,3 @@
+kubectl config set-context --current --namespace=otus-msa
+
+kubectl port-forward service/my-service 8080:80 http://localhost:8080
