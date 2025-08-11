@@ -13,15 +13,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1/health",
+					"raw": "http://arch.homework/otus-msa-service/stepan/health",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"arch",
+						"homework"
 					],
 					"path": [
+						"otus-msa-service",
+						"stepan",
 						"health"
 					]
 				}
