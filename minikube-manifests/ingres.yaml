@@ -2,6 +2,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
   name: otus-msa-ingress
   namespace: otus-msa
 spec:
@@ -9,8 +11,8 @@ spec:
   - host: arch.homework
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - path: /otus-msa-service/stepan/(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: otus-msa-service
